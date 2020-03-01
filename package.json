@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "zb": "node index.js"
+    "zb1": "start",
+    "zb2": "index",
+    "zb3": "index.js",
+    "zb4": "node index.js",
+    "zb5": "node"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "zb"
+    "install": "zb1"
   },
   "keywords": [],
   "author": "",
