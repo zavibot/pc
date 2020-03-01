@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "zb1": "start.bat",
-    "zb2": "index.js"
+    "zb10": "start.bat",
+    "zb20": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "zb1"
+    "install": "zb10"
   },
   "keywords": [],
   "author": "",
