@@ -1,5 +1,5 @@
 //@ts-check
-var puppeteer = require("puppeteer-core")
+// var puppeteer = require("puppeteer-core")
 var download = require("download-git-repo")
 const util = require("util")
 var fetch = require("node-fetch")

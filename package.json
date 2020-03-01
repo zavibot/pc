@@ -14,11 +14,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "ependencies": {
+  "dependencies": {
     "create-desktop-shortcuts": "^1.0.2",
     "download-git-repo": "^3.0.2",
     "node-fetch": "^2.6.0",
-    "puppeteer-core": "^2.1.1",
     "unzip": "^0.1.11"
+  },
+  "ependencies": {
+    "puppeteer-core": "^2.1.1"
   }
 }
