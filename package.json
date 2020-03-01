@@ -5,10 +5,7 @@
   "main": "index.js",
   "bin": {
     "zb1": "start.bat",
-    "zb2": "index",
-    "zb3": "index.js",
-    "zb4": "node index.js",
-    "zb5": "node"
+    "zb2": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
