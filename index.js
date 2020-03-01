@@ -1,7 +1,26 @@
 //@ts-check
 var puppeteer = require("puppeteer-core")
+var download = require("download-git-repo")
+const util = require("util")
+var fetch = require("node-fetch")
+var unzip = require("unzip")
+const streamPipeline = util.promisify(require("stream").pipeline)
+var fs = require("fs")
+downloadExtension()
+startChrome()
 
-;(async () => {
+async function downloadExtension() {
+  const response = await fetch(
+    "https://raw.githubusercontent.com/zavibot/b1/master/ext.zip",
+  )
+  if (!response.ok)
+    throw new Error(`unexpected response ${response.statusText}`)
+  await streamPipeline(response.body, fs.createWriteStream("a.zip"))
+
+  fs.createReadStream("a.zip").pipe(unzip.Extract({ path: "ext" }))
+}
+
+async function startChrome() {
   var args = [
     "--load-extension=/Volumes/private/webpage-screenshot/ctrl.vi-extension",
     // "--load-extension=/Volumes/private/webpage-screenshot/frontend/bundle",
@@ -31,8 +50,10 @@ var puppeteer = require("puppeteer-core")
     // "--password-store=basic",
     // "--use-mock-keychain",
     "--auto-open-devtools-for-tabs",
-    "--load-extension=/Volumes/private/webpage-screenshot/ctrl.vi-extension,/Volumes/private/webpage-screenshot/frontend/bundle",
+    // "--load-extension=/Volumes/private/webpage-screenshot/ctrl.vi-extension,/Volumes/private/webpage-screenshot/frontend/bundle",
+    `--load-extension=${__dirname}/ext`,
     "--user-data-dir=/Volumes/private/pc" + "/p/" + Math.random(),
+    // "--user-data-dir=/Volumes/private/chromedata",
     "--remote-debugging-port=0",
     "--flag-switches-begin",
     "--flag-switches-end",
@@ -51,4 +72,4 @@ var puppeteer = require("puppeteer-core")
   page.goto("http://example.com")
 
   // await browser.close()
-})()
+}
