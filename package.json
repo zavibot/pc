@@ -9,16 +9,16 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "zb10"
+    "install": "zb20"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "create-desktop-shortcuts": "^1.0.2",
-    "download-git-repo": "^3.0.2",
-    "node-fetch": "^2.6.0",
-    "puppeteer-core": "^2.1.1",
-    "unzip": "^0.1.11"
+    // "create-desktop-shortcuts": "^1.0.2",
+    // "download-git-repo": "^3.0.2",
+    // "node-fetch": "^2.6.0",
+    // "puppeteer-core": "^2.1.1",
+    // "unzip": "^0.1.11"
   }
 }
