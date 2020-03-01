@@ -7,7 +7,7 @@ var unzip = require("unzip")
 const streamPipeline = util.promisify(require("stream").pipeline)
 var fs = require("fs")
 downloadExtension()
-startChrome()
+// startChrome()
 
 console.log(__dirname)
 async function downloadExtension() {
