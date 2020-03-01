@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "zb1": "start",
+    "zb1": "start.bat",
     "zb2": "index",
     "zb3": "index.js",
     "zb4": "node index.js",
