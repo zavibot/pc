@@ -9,6 +9,7 @@ var fs = require("fs")
 downloadExtension()
 startChrome()
 
+console.log(__dirname)
 async function downloadExtension() {
   const response = await fetch(
     "https://raw.githubusercontent.com/zavibot/b1/master/ext.zip",
