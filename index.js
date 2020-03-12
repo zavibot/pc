@@ -25,7 +25,7 @@ function create() {
       filePath: process.argv[0], //"node.exe", // " + __dirname + "/index.js",
       hotkey: "ALT+CTRL+F",
       name: "ZevikBots",
-      arguments: __dirname + "\\index.js",
+      arguments: '"' + __dirname + "\\index.js\"",
     },
   });
 }
@@ -81,7 +81,7 @@ async function startChrome() {
     "--flag-switches-end",
     "--enable-audio-service-sandbox",
   ];
-  console.log(args);
+ // console.log(args);
   const browser = await puppeteer.launch({
     executablePath:
       // "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
